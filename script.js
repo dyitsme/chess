@@ -16,13 +16,13 @@ for (let i = 0; i < 8; i++) {
   for (let j = 0; j < 8; j++) {
     if (j % 2 === i % 2) {
       let tile = document.createElement('div')
-      tile.className = 'black-tile'
+      tile.className = 'white-tile'
       row.appendChild(tile)
       // document.body.appendChild(tile)
     }
     else {
       let tile = document.createElement('div')
-      tile.className = 'white-tile'
+      tile.className = 'black-tile'
       row.appendChild(tile)
       // document.body.appendChild(tile)
     }
