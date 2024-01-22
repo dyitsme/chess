@@ -1,0 +1,16 @@
+.black-tile {
+  width: 100px;
+  height: 100px;
+  background: darkslategrey;
+}
+
+.white-tile {
+  width: 100px;
+  height: 100px;
+  background: lightgrey;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
