@@ -17,12 +17,20 @@ for (let i = 0; i < 8; i++) {
     if (j % 2 === i % 2) {
       let tile = document.createElement('div')
       tile.className = 'white-tile'
+      // add chess notation
+      const c = String.fromCharCode(96+j+1)
+
+      tile.id = `${c}${8-i}`
       row.appendChild(tile)
-      // document.body.appendChild(tile)
     }
     else {
       let tile = document.createElement('div')
       tile.className = 'black-tile'
+      // add chess notation
+
+      const c = String.fromCharCode(96+j+1)
+
+      tile.id = `${c}${8-i}`
       row.appendChild(tile)
       // document.body.appendChild(tile)
     }
@@ -30,3 +38,44 @@ for (let i = 0; i < 8; i++) {
   }
 }
 document.body.appendChild(board)
+
+let $ = function (elementId) {
+  return document.getElementById(elementId)
+}
+
+// create pieces
+$('a8').textContent = 'R'
+$('b8').textContent = 'N'
+$('c8').textContent = 'B'
+$('d8').textContent = 'Q'
+$('e8').textContent = 'K'
+$('f8').textContent = 'B'
+$('g8').textContent = 'N'
+$('h8').textContent = 'R'
+
+$('a7').textContent = 'p'
+$('b7').textContent = 'p'
+$('c7').textContent = 'p'
+$('d7').textContent = 'p'
+$('e7').textContent = 'p'
+$('f7').textContent = 'p'
+$('g7').textContent = 'p'
+$('h7').textContent = 'p'
+
+$('a2').textContent = 'p'
+$('b2').textContent = 'p'
+$('c2').textContent = 'p'
+$('d2').textContent = 'p'
+$('e2').textContent = 'p'
+$('f2').textContent = 'p'
+$('g2').textContent = 'p'
+$('h2').textContent = 'p'
+
+$('a1').textContent = 'R'
+$('b1').textContent = 'N'
+$('c1').textContent = 'B'
+$('d1').textContent = 'Q'
+$('e1').textContent = 'K'
+$('f1').textContent = 'B'
+$('g1').textContent = 'N'
+$('h1').textContent = 'R'
