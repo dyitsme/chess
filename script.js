@@ -43,15 +43,34 @@ let $ = function (elementId) {
   return document.getElementById(elementId)
 }
 
-// create pieces
-$('a8').textContent = 'R'
+// create rooks
+let br1 = document.createElement('div')
+let br2 = document.createElement('div')
+let wr1 = document.createElement('div')
+let wr2 = document.createElement('div')
+let bRookSprite1 = document.createElement('img')
+let bRookSprite2 = document.createElement('img')
+let wRookSprite1 = document.createElement('img')
+let wRookSprite2 = document.createElement('img')
+bRookSprite1.src = 'assets/blackrook.svg'
+bRookSprite2.src = 'assets/blackrook.svg'
+wRookSprite1.src = 'assets/whiterook.svg'
+wRookSprite2.src = 'assets/whiterook.svg'
+
+br1.appendChild(bRookSprite1)
+br2.appendChild(bRookSprite2)
+wr1.appendChild(wRookSprite1)
+wr2.appendChild(wRookSprite2)
+
+$('a8').appendChild(bRookSprite1)
+
 $('b8').textContent = 'N'
 $('c8').textContent = 'B'
 $('d8').textContent = 'Q'
 $('e8').textContent = 'K'
 $('f8').textContent = 'B'
 $('g8').textContent = 'N'
-$('h8').textContent = 'R'
+$('h8').appendChild(br2)
 
 $('a7').textContent = 'p'
 $('b7').textContent = 'p'
@@ -71,11 +90,11 @@ $('f2').textContent = 'p'
 $('g2').textContent = 'p'
 $('h2').textContent = 'p'
 
-$('a1').textContent = 'R'
+$('a1').appendChild(wr1)
 $('b1').textContent = 'N'
 $('c1').textContent = 'B'
 $('d1').textContent = 'Q'
 $('e1').textContent = 'K'
 $('f1').textContent = 'B'
 $('g1').textContent = 'N'
-$('h1').textContent = 'R'
+$('h1').appendChild(wr2)
